@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A9ADDDD4-C1DD-4EF8-8C07-28CF16351973}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>testRelay</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\testRelay\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>UsageEnvironment.lib;liveMedia.lib;groupsock.lib;BasicUsageEnvironment.lib;Ws2_32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="testRelay.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\AACAudioMatroskaFileServerMediaSubsession.hh" />
+    <None Include="include\AC3AudioFileServerMediaSubsession.hh" />
+    <None Include="include\AC3AudioMatroskaFileServerMediaSubsession.hh" />
+    <None Include="include\AC3AudioRTPSink.hh" />
+    <None Include="include\AC3AudioRTPSource.hh" />
+    <None Include="include\AC3AudioStreamFramer.hh" />
+    <None Include="include\ADTSAudioFileServerMediaSubsession.hh" />
+    <None Include="include\ADTSAudioFileSource.hh" />
+    <None Include="include\AMRAudioFileServerMediaSubsession.hh" />
+    <None Include="include\AMRAudioFileSink.hh" />
+    <None Include="include\AMRAudioFileSource.hh" />
+    <None Include="include\AMRAudioRTPSink.hh" />
+    <None Include="include\AMRAudioRTPSource.hh" />
+    <None Include="include\AMRAudioSource.hh" />
+    <None Include="include\AudioInputDevice.hh" />
+    <None Include="include\AudioRTPSink.hh" />
+    <None Include="include\AVIFileSink.hh" />
+    <None Include="include\Base64.hh" />
+    <None Include="include\BasicHashTable.hh" />
+    <None Include="include\BasicUDPSink.hh" />
+    <None Include="include\BasicUDPSource.hh" />
+    <None Include="include\BasicUsageEnvironment.hh" />
+    <None Include="include\BasicUsageEnvironment0.hh" />
+    <None Include="include\BasicUsageEnvironment_version.hh" />
+    <None Include="include\BitVector.hh" />
+    <None Include="include\Boolean.hh" />
+    <None Include="include\ByteStreamFileSource.hh" />
+    <None Include="include\ByteStreamMemoryBufferSource.hh" />
+    <None Include="include\ByteStreamMultiFileSource.hh" />
+    <None Include="include\COPYING" />
+    <None Include="include\DarwinInjector.hh" />
+    <None Include="include\DelayQueue.hh" />
+    <None Include="include\DeviceSource.hh" />
+    <None Include="include\DigestAuthentication.hh" />
+    <None Include="include\DVVideoFileServerMediaSubsession.hh" />
+    <None Include="include\DVVideoRTPSink.hh" />
+    <None Include="include\DVVideoRTPSource.hh" />
+    <None Include="include\DVVideoStreamFramer.hh" />
+    <None Include="include\EBMLNumber.hh" />
+    <None Include="include\FileServerMediaSubsession.hh" />
+    <None Include="include\FileSink.hh" />
+    <None Include="include\FramedFileSource.hh" />
+    <None Include="include\FramedFilter.hh" />
+    <None Include="include\FramedSource.hh" />
+    <None Include="include\GroupEId.hh" />
+    <None Include="include\Groupsock.hh" />
+    <None Include="include\GroupsockHelper.hh" />
+    <None Include="include\groupsock_version.hh" />
+    <None Include="include\GSMAudioRTPSink.hh" />
+    <None Include="include\H261VideoRTPSource.hh" />
+    <None Include="include\H263plusVideoFileServerMediaSubsession.hh" />
+    <None Include="include\H263plusVideoRTPSink.hh" />
+    <None Include="include\H263plusVideoRTPSource.hh" />
+    <None Include="include\H263plusVideoStreamFramer.hh" />
+    <None Include="include\H263plusVideoStreamParser.hh" />
+    <None Include="include\H264VideoFileServerMediaSubsession.hh" />
+    <None Include="include\H264VideoFileSink.hh" />
+    <None Include="include\H264VideoMatroskaFileServerMediaSubsession.hh" />
+    <None Include="include\H264VideoRTPSink.hh" />
+    <None Include="include\H264VideoRTPSource.hh" />
+    <None Include="include\H264VideoStreamDiscreteFramer.hh" />
+    <None Include="include\H264VideoStreamFramer.hh" />
+    <None Include="include\HandlerSet.hh" />
+    <None Include="include\HashTable.hh" />
+    <None Include="include\InputFile.hh" />
+    <None Include="include\IOHandlers.hh" />
+    <None Include="include\JPEGVideoRTPSink.hh" />
+    <None Include="include\JPEGVideoRTPSource.hh" />
+    <None Include="include\JPEGVideoSource.hh" />
+    <None Include="include\liveMedia.hh" />
+    <None Include="include\liveMedia_version.hh" />
+    <None Include="include\Locale.hh" />
+    <None Include="include\Makefile.head" />
+    <None Include="include\Makefile.tail" />
+    <None Include="include\MatroskaDemuxedTrack.hh" />
+    <None Include="include\MatroskaFile.hh" />
+    <None Include="include\MatroskaFileParser.hh" />
+    <None Include="include\MatroskaFileServerDemux.hh" />
+    <None Include="include\Media.hh" />
+    <None Include="include\MediaSession.hh" />
+    <None Include="include\MediaSink.hh" />
+    <None Include="include\MediaSource.hh" />
+    <None Include="include\MP3ADU.hh" />
+    <None Include="include\MP3ADUdescriptor.hh" />
+    <None Include="include\MP3ADUinterleaving.hh" />
+    <None Include="include\MP3ADURTPSink.hh" />
+    <None Include="include\MP3ADURTPSource.hh" />
+    <None Include="include\MP3ADUTranscoder.hh" />
+    <None Include="include\MP3AudioFileServerMediaSubsession.hh" />
+    <None Include="include\MP3AudioMatroskaFileServerMediaSubsession.hh" />
+    <None Include="include\MP3FileSource.hh" />
+    <None Include="include\MP3Internals.hh" />
+    <None Include="include\MP3InternalsHuffman.hh" />
+    <None Include="include\MP3StreamState.hh" />
+    <None Include="include\MP3Transcoder.hh" />
+    <None Include="include\MPEG1or2AudioRTPSink.hh" />
+    <None Include="include\MPEG1or2AudioRTPSource.hh" />
+    <None Include="include\MPEG1or2AudioStreamFramer.hh" />
+    <None Include="include\MPEG1or2Demux.hh" />
+    <None Include="include\MPEG1or2DemuxedElementaryStream.hh" />
+    <None Include="include\MPEG1or2DemuxedServerMediaSubsession.hh" />
+    <None Include="include\MPEG1or2FileServerDemux.hh" />
+    <None Include="include\MPEG1or2VideoFileServerMediaSubsession.hh" />
+    <None Include="include\MPEG1or2VideoRTPSink.hh" />
+    <None Include="include\MPEG1or2VideoRTPSource.hh" />
+    <None Include="include\MPEG1or2VideoStreamDiscreteFramer.hh" />
+    <None Include="include\MPEG1or2VideoStreamFramer.hh" />
+    <None Include="include\MPEG2IndexFromTransportStream.hh" />
+    <None Include="include\MPEG2TransportFileServerMediaSubsession.hh" />
+    <None Include="include\MPEG2TransportStreamFramer.hh" />
+    <None Include="include\MPEG2TransportStreamFromESSource.hh" />
+    <None Include="include\MPEG2TransportStreamFromPESSource.hh" />
+    <None Include="include\MPEG2TransportStreamIndexFile.hh" />
+    <None Include="include\MPEG2TransportStreamMultiplexor.hh" />
+    <None Include="include\MPEG2TransportStreamTrickModeFilter.hh" />
+    <None Include="include\MPEG2TransportUDPServerMediaSubsession.hh" />
+    <None Include="include\MPEG4ESVideoRTPSink.hh" />
+    <None Include="include\MPEG4ESVideoRTPSource.hh" />
+    <None Include="include\MPEG4GenericRTPSink.hh" />
+    <None Include="include\MPEG4GenericRTPSource.hh" />
+    <None Include="include\MPEG4LATMAudioRTPSink.hh" />
+    <None Include="include\MPEG4LATMAudioRTPSource.hh" />
+    <None Include="include\MPEG4VideoFileServerMediaSubsession.hh" />
+    <None Include="include\MPEG4VideoStreamDiscreteFramer.hh" />
+    <None Include="include\MPEG4VideoStreamFramer.hh" />
+    <None Include="include\MPEGVideoStreamFramer.hh" />
+    <None Include="include\MPEGVideoStreamParser.hh" />
+    <None Include="include\MultiFramedRTPSink.hh" />
+    <None Include="include\MultiFramedRTPSource.hh" />
+    <None Include="include\NetAddress.hh" />
+    <None Include="include\NetInterface.hh" />
+    <None Include="include\OnDemandServerMediaSubsession.hh" />
+    <None Include="include\OutputFile.hh" />
+    <None Include="include\PassiveServerMediaSubsession.hh" />
+    <None Include="include\ProxyServerMediaSession.hh" />
+    <None Include="include\QCELPAudioRTPSource.hh" />
+    <None Include="include\QuickTimeFileSink.hh" />
+    <None Include="include\QuickTimeGenericRTPSource.hh" />
+    <None Include="include\RTCP.hh" />
+    <None Include="include\RTPInterface.hh" />
+    <None Include="include\RTPSink.hh" />
+    <None Include="include\RTPSource.hh" />
+    <None Include="include\RTSPClient.hh" />
+    <None Include="include\RTSPCommon.hh" />
+    <None Include="include\RTSPServer.hh" />
+    <None Include="include\RTSPServerSupportingHTTPStreaming.hh" />
+    <None Include="include\ServerMediaSession.hh" />
+    <None Include="include\SimpleRTPSink.hh" />
+    <None Include="include\SimpleRTPSource.hh" />
+    <None Include="include\SIPClient.hh" />
+    <None Include="include\strDup.hh" />
+    <None Include="include\StreamParser.hh" />
+    <None Include="include\StreamReplicator.hh" />
+    <None Include="include\T140TextMatroskaFileServerMediaSubsession.hh" />
+    <None Include="include\T140TextRTPSink.hh" />
+    <None Include="include\TCPStreamSink.hh" />
+    <None Include="include\TextRTPSink.hh" />
+    <None Include="include\TunnelEncaps.hh" />
+    <None Include="include\uLawAudioFilter.hh" />
+    <None Include="include\UsageEnvironment.hh" />
+    <None Include="include\UsageEnvironment_version.hh" />
+    <None Include="include\VideoRTPSink.hh" />
+    <None Include="include\VorbisAudioMatroskaFileServerMediaSubsession.hh" />
+    <None Include="include\VorbisAudioRTPSink.hh" />
+    <None Include="include\VorbisAudioRTPSource.hh" />
+    <None Include="include\VP8VideoMatroskaFileServerMediaSubsession.hh" />
+    <None Include="include\VP8VideoRTPSink.hh" />
+    <None Include="include\VP8VideoRTPSource.hh" />
+    <None Include="include\WAVAudioFileServerMediaSubsession.hh" />
+    <None Include="include\WAVAudioFileSource.hh" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\NetCommon.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
